@@ -1,25 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transporte y Turismo Guaraní</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        header {
+            background-color: #c00000;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav {
+            background-color: #8b0000;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        section {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #c00000;
+        }
+
+        .card {
+            background-color: #f8f8f8;
+            border-left: 5px solid #c00000;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #c00000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
+
 <body>
 
+<header>
     <h1>Transporte y Turismo Guaraní</h1>
+    <p>Viaja seguro, cómodo y puntual.</p>
+</header>
 
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#itinerarios">Itinerarios</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio">
     <h2>Bienvenidos</h2>
-    <p>Información sobre itinerarios y recorridos.</p>
 
+    <div class="card">
+        <p>
+            Somos una empresa dedicada al transporte y turismo,
+            ofreciendo seguridad, comodidad y puntualidad para nuestros pasajeros.
+        </p>
+    </div>
+</section>
+
+<section id="itinerarios">
     <h2>Itinerarios</h2>
-    <ul>
-        <li>Línea 1: Centro - Terminal</li>
-        <li>Línea 2: Centro - Hospital</li>
-        <li>Línea 3: Centro - Escuela</li>
-    </ul>
 
+    <div class="card">
+        <ul>
+            <li>Línea 1: Centro - Terminal</li>
+            <li>Línea 2: Centro - Hospital</li>
+            <li>Línea 3: Centro - Escuela</li>
+        </ul>
+    </div>
+</section>
+
+<section id="ubicacion">
     <h2>Ubicación en tiempo real</h2>
-    <p>Próximamente disponible.</p>
+
+    <div class="card">
+        <p>Próximamente disponible.</p>
+    </div>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+
+    <div class="card">
+        <p><strong>Teléfono:</strong> +595 XXX XXX XXX</p>
+        <p><strong>Email:</strong> contacto@guarani.com</p>
+        <p><strong>Dirección:</strong> Ciudad, Paraguay</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Transporte y Turismo Guaraní - Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
