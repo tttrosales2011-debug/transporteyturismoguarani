@@ -1,143 +1,247 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transporte y Turismo Guaraní</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transporte y Turismo Guaraní S.R.L</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #ffffff;
-            color: #333;
-        }
+<style>
 
-        header {
-            background-color: #c00000;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-
-        nav {
-            background-color: #8b0000;
-            text-align: center;
-            padding: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #ffd700;
-        }
-
-        section {
-            padding: 30px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        h2 {
-            color: #c00000;
-        }
-
-        .card {
-            background-color: #f8f8f8;
-            border-left: 5px solid #c00000;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-
-        footer {
-            background-color: #c00000;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }.hero {
-    width: 100%;
-    text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
 }
 
-.hero img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+body{
+    background:#f4f4f4;
+    color:#333;
 }
-    </style>
+
+header{
+    background:linear-gradient(to right,#b30000,#ff0000);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    font-size:45px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:20px;
+}
+
+nav{
+    background:#8b0000;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+h2{
+    color:#b30000;
+    margin-bottom:20px;
+    border-left:5px solid red;
+    padding-left:10px;
+}
+
+.tarjeta{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.itinerario{
+    background:white;
+    margin-bottom:20px;
+    padding:20px;
+    border-left:5px solid red;
+    border-radius:8px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.galeria img{
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+
+.contacto p{
+    margin:10px 0;
+}
+
+footer{
+    background:#8b0000;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Transporte y Turismo Guaraní</h1>
-    <p>Viaja seguro, cómodo y puntual.</p>
+    <h1>Transporte y Turismo Guaraní S.R.L</h1>
+    <p>Excelencia en servicios</p>
 </header>
 
 <nav>
     <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
     <a href="#itinerarios">Itinerarios</a>
-    <a href="#ubicacion">Ubicación</a>
+    <a href="#horarios">Horarios</a>
+    <a href="#galeria">Galería</a>
     <a href="#contacto">Contacto</a>
 </nav>
 
 <section id="inicio">
-    <h2>Bienvenidos</h2>
-
-    <div class="card">
+    <div class="tarjeta">
+        <h2>Bienvenidos</h2>
         <p>
-            Somos una empresa dedicada al transporte y turismo,
-            ofreciendo seguridad, comodidad y puntualidad para nuestros pasajeros.
+        Somos una empresa dedicada al Transporte Público Paraguayo,
+        ofreciendo seguridad, comodidad y puntualidad para todos nuestros pasajeros.
+        </p>
+    </div>
+</section>
+
+<section id="nosotros">
+    <div class="tarjeta">
+        <h2>Nosotros</h2>
+        <p>
+        Transporte y Turismo Guaraní S.R.L es una empresa ubicada en la ciudad de Luque,
+        dedicada al transporte público paraguayo con alta excelencia en servicios.
+        Nuestro compromiso es brindar un viaje seguro, cómodo y eficiente.
         </p>
     </div>
 </section>
 
 <section id="itinerarios">
-    <h2>Itinerarios</h2>
 
-    <div class="card">
-        <ul>
-            <li>Línea 1: Centro - Terminal</li>
-            <li>Línea 2: Centro - Hospital</li>
-            <li>Línea 3: Centro - Escuela</li>
-        </ul>
-    </div>
+<h2>Itinerarios</h2>
+
+<div class="itinerario">
+<h3>Línea 43-1 (Altos - Asunción)</h3>
+<p>Altos - San Bernardino - Tarumandy - Luque - Ruta Luque/San Lorenzo - Av. Mcal López - UNA - Clínicas - Identificaciones - Mercado 4 - Av. Félix Bogado.</p>
+</div>
+
+<div class="itinerario">
+<h3>Línea 43-2 (Luque - Asunción)</h3>
+<p>Costa Sosa - Maka'i - Luque - Ruta Luque/San Lorenzo - San Lorenzo - UNA - Ruta 2 - Av. Eusebio Ayala - Mercado 4 - Av. Félix Bogado - Barrio Republicano.</p>
+</div>
+
+<div class="itinerario">
+<h3>Línea 43-3 (Luque - Asunción)</h3>
+<p>Costa Sosa - Maka'i - Luque - Av. Gral Aquino - Tape Tuja - Av. Madame Lynch - Abasto - Calle Última - Av. Zavalas Cue - Tres Bocas - 4 Mojones - Av. Cacique Lambaré - Barrio Republicano.</p>
+</div>
+
+<div class="itinerario">
+<h3>Línea 43 Circular</h3>
+<p>Maramburé - Luque - Av. América - Aeropuerto.</p>
+</div>
+
+<div class="itinerario">
+<h3>Línea 40-1 (Luque - Asunción)</h3>
+<p>Costa Sosa - 3 de Mayo - Primavera - Luque - Autopista - Aeropuerto - Mariano Roque Alonso - Transchaco - Botánico - IPS Central - Av. Médicos del Chaco - Av. Dr. Fernando de la Mora - Terminal - Av. Defensores del Chaco - Av. San Isidro - Av. Cacique Lambaré - Barrio Republicano.</p>
+</div>
+
 </section>
 
-<section id="ubicacion">
-    <h2>Ubicación en tiempo real</h2>
+<section id="horarios">
 
-    <div class="card">
-        <p>Próximamente disponible.</p>
-    </div>
+<h2>Horarios</h2>
+
+<div class="tarjeta">
+
+<p><strong>Línea 43-1:</strong></p>
+<p>Primeras salidas (Altos): 03:00 - 03:20 - 03:40</p>
+<p>Últimas salidas: 22:40 - 23:00</p>
+
+<br>
+
+<p><strong>Líneas 43-2, 43-3, 43 Circular y 40-1:</strong></p>
+<p>Primeras salidas (Costa Sosa): 03:30 - 03:50</p>
+<p>Últimas salidas: 22:30 - 23:00 - 23:15</p>
+
+</div>
+
+</section>
+
+<section id="galeria">
+
+<h2>Galería de Fotos</h2>
+
+<div class="galeria">
+
+<img src="bus1.jpg" alt="Bus TTG">
+<img src="bus2.jpg" alt="Bus TTG">
+<img src="bus3.jpg" alt="Bus TTG">
+
+</div>
+
 </section>
 
 <section id="contacto">
-    <h2>Contacto</h2>
 
-    <div class="card">
-        <p><strong>Teléfono:</strong> +595 XXX XXX XXX</p>
-        <p><strong>Email:</strong> contacto@guarani.com</p>
-        <p><strong>Dirección:</strong> Ciudad, Paraguay</p>
-    </div>
+<h2>Contacto</h2>
+
+<div class="tarjeta contacto">
+
+<p><strong>Dirección:</strong> Coronel Martínez, Luque</p>
+
+<p><strong>Teléfono:</strong> (021) 543-243</p>
+
+<p><strong>WhatsApp:</strong> 0986549906</p>
+
+<p><strong>Correo:</strong> tttrosales2011@gmail.com</p>
+
+<br>
+
+<h3>Redes Sociales</h3>
+
+<p>TikTok: buses.py</p>
+<p>Facebook: Transporte y Turismo Guaraní S.R.L</p>
+<p>Instagram: Transporte y Turismo Guaraní S.R.L</p>
+
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Transporte y Turismo Guaraní - Todos los derechos reservados.</p>
+
+<p>© 2026 Transporte y Turismo Guaraní S.R.L</p>
+
+<p>Excelencia en servicios</p>
+
 </footer>
 
 </body>
 </html>
-<section class="hero">
-    <img src="IMG-20260622-WA0000.jpg" alt="Bus Transporte y Turismo Guaraní">
-</section>
