@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Transporte y Turismo Guaraní</title>
 </head>
 <body>
+
     <h1>Transporte y Turismo Guaraní</h1>
 
     <h2>Bienvenidos</h2>
@@ -18,5 +20,30 @@
 
     <h2>Ubicación en tiempo real</h2>
     <p>Próximamente disponible.</p>
+
+</body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Transporte y Turismo Guaraní</title>
+</head>
+<body>
+
+    <h1>Transporte y Turismo Guaraní</h1>
+
+    <h2>Bienvenidos</h2>
+    <p>Información sobre itinerarios y recorridos.</p>
+
+    <h2>Itinerarios</h2>
+    <ul>
+        <li>Línea 1: Centro - Terminal</li>
+        <li>Línea 2: Centro - Hospital</li>
+        <li>Línea 3: Centro - Escuela</li>
+    </ul>
+
+    <h2>Ubicación en tiempo real</h2>
+    <p>Próximamente disponible.</p>
+
 </body>
 </html>
