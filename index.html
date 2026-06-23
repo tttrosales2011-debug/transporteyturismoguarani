@@ -11,40 +11,47 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f4f4f4;
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
     color:#333;
 }
 
 header{
-    background:linear-gradient(to right,#b30000,#ff0000);
+    background:linear-gradient(rgba(180,0,0,0.8), rgba(180,0,0,0.8)),
+    url('bus1.jpg');
+    background-size:cover;
+    background-position:center;
     color:white;
     text-align:center;
-    padding:50px 20px;
+    padding:100px 20px;
 }
 
 header h1{
-    font-size:45px;
+    font-size:50px;
+    margin-bottom:10px;
 }
 
 header p{
-    margin-top:10px;
-    font-size:20px;
+    font-size:25px;
 }
 
 nav{
-    background:#8b0000;
-    padding:15px;
+    background:#8B0000;
+    position:sticky;
+    top:0;
+    z-index:1000;
     text-align:center;
+    padding:15px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
+    margin:0 15px;
     font-weight:bold;
 }
 
@@ -55,29 +62,40 @@ nav a:hover{
 section{
     max-width:1200px;
     margin:auto;
-    padding:50px 20px;
+    padding:60px 20px;
 }
 
 h2{
     color:#b30000;
-    margin-bottom:20px;
-    border-left:5px solid red;
-    padding-left:10px;
+    text-align:center;
+    margin-bottom:30px;
+    font-size:35px;
 }
 
 .tarjeta{
     background:white;
-    padding:25px;
+    padding:30px;
     border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.itinerarios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
 }
 
 .itinerario{
     background:white;
-    margin-bottom:20px;
     padding:20px;
-    border-left:5px solid red;
-    border-radius:8px;
+    border-left:6px solid red;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.itinerario h3{
+    color:#b30000;
+    margin-bottom:15px;
 }
 
 .galeria{
@@ -88,20 +106,65 @@ h2{
 
 .galeria img{
     width:100%;
+    height:250px;
+    object-fit:cover;
     border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.3);
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
 }
 
-.contacto p{
-    margin:10px 0;
+.contacto{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.contacto div{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 footer{
-    background:#8b0000;
+    background:#8B0000;
     color:white;
     text-align:center;
     padding:30px;
-    margin-top:40px;
+}
+
+.whatsapp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:white;
+    border-radius:50%;
+    text-align:center;
+    font-size:35px;
+    line-height:60px;
+    text-decoration:none;
+}
+
+iframe{
+    width:100%;
+    height:400px;
+    border:none;
+    border-radius:10px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:35px;
+}
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
 }
 
 </style>
@@ -109,7 +172,7 @@ footer{
 
 <body>
 
-<header>
+<header id="inicio">
     <h1>Transporte y Turismo Guaraní S.R.L</h1>
     <p>Excelencia en servicios</p>
 </header>
@@ -121,41 +184,43 @@ footer{
     <a href="#horarios">Horarios</a>
     <a href="#galeria">Galería</a>
     <a href="#contacto">Contacto</a>
+    <a href="#ubicacion">Ubicación</a>
 </nav>
 
-<section id="inicio">
-    <div class="tarjeta">
-        <h2>Bienvenidos</h2>
-        <p>
-        Somos una empresa dedicada al Transporte Público Paraguayo,
-        ofreciendo seguridad, comodidad y puntualidad para todos nuestros pasajeros.
-        </p>
-    </div>
-</section>
-
 <section id="nosotros">
-    <div class="tarjeta">
-        <h2>Nosotros</h2>
-        <p>
-        Transporte y Turismo Guaraní S.R.L es una empresa ubicada en la ciudad de Luque,
-        dedicada al transporte público paraguayo con alta excelencia en servicios.
-        Nuestro compromiso es brindar un viaje seguro, cómodo y eficiente.
-        </p>
-    </div>
+
+<h2>Nosotros</h2>
+
+<div class="tarjeta">
+
+<p>
+Somos una empresa dedicada al Transporte Público Paraguayo con alta excelencia en servicios.
+Nos comprometemos a brindar seguridad, comodidad y puntualidad a todos nuestros pasajeros.
+</p>
+
+<br>
+
+<p><strong>Ciudad:</strong> Luque</p>
+<p><strong>Dirección:</strong> Coronel Martínez</p>
+
+</div>
+
 </section>
 
 <section id="itinerarios">
 
 <h2>Itinerarios</h2>
 
+<div class="itinerarios">
+
 <div class="itinerario">
 <h3>Línea 43-1 (Altos - Asunción)</h3>
-<p>Altos - San Bernardino - Tarumandy - Luque - Ruta Luque/San Lorenzo - Av. Mcal López - UNA - Clínicas - Identificaciones - Mercado 4 - Av. Félix Bogado.</p>
+<p>Altos - San Bernardino - Tarumandy - Luque - Ruta Luque San Lorenzo - Av. Mcal López - UNA - Clínicas - Identificaciones - Mercado 4 - Av. Félix Bogado.</p>
 </div>
 
 <div class="itinerario">
 <h3>Línea 43-2 (Luque - Asunción)</h3>
-<p>Costa Sosa - Maka'i - Luque - Ruta Luque/San Lorenzo - San Lorenzo - UNA - Ruta 2 - Av. Eusebio Ayala - Mercado 4 - Av. Félix Bogado - Barrio Republicano.</p>
+<p>Costa Sosa - Maka'i - Luque - Ruta Luque San Lorenzo - San Lorenzo - UNA - Ruta 2 - Av. Eusebio Ayala - Mercado 4 - Av. Félix Bogado - Barrio Republicano.</p>
 </div>
 
 <div class="itinerario">
@@ -170,7 +235,9 @@ footer{
 
 <div class="itinerario">
 <h3>Línea 40-1 (Luque - Asunción)</h3>
-<p>Costa Sosa - 3 de Mayo - Primavera - Luque - Autopista - Aeropuerto - Mariano Roque Alonso - Transchaco - Botánico - IPS Central - Av. Médicos del Chaco - Av. Dr. Fernando de la Mora - Terminal - Av. Defensores del Chaco - Av. San Isidro - Av. Cacique Lambaré - Barrio Republicano.</p>
+<p>Costa Sosa - 3 de Mayo - Primavera - Luque - Autopista - Aeropuerto - Mariano Roque Alonso - Transchaco - Botánico - IPS Central - Av. Médicos del Chaco - Av. Fernando de la Mora - Terminal - Av. Defensores del Chaco - Av. San Isidro - Av. Cacique Lambaré - Barrio Republicano.</p>
+</div>
+
 </div>
 
 </section>
@@ -181,14 +248,14 @@ footer{
 
 <div class="tarjeta">
 
-<p><strong>Línea 43-1:</strong></p>
-<p>Primeras salidas (Altos): 03:00 - 03:20 - 03:40</p>
+<h3>Línea 43-1</h3>
+<p>Primeras salidas: 03:00 - 03:20 - 03:40</p>
 <p>Últimas salidas: 22:40 - 23:00</p>
 
 <br>
 
-<p><strong>Líneas 43-2, 43-3, 43 Circular y 40-1:</strong></p>
-<p>Primeras salidas (Costa Sosa): 03:30 - 03:50</p>
+<h3>Líneas 43-2, 43-3, 43 Circular y 40-1</h3>
+<p>Primeras salidas: 03:30 - 03:50</p>
 <p>Últimas salidas: 22:30 - 23:00 - 23:15</p>
 
 </div>
@@ -201,9 +268,9 @@ footer{
 
 <div class="galeria">
 
-<img src="foto1.jpeg" alt="Bus TTG">
-<img src="foto3.jpeg" alt="Bus TTG">
-<img src="foto2.jpeg" alt="Bus TTG">
+<img src="foto1.jpeg">
+<img src="foto2.jpeg">
+<img src="foto3.jpeg">
 
 </div>
 
@@ -211,37 +278,51 @@ footer{
 
 <section id="contacto">
 
-<h2>Contacto</h2>
+<h2>Contacto y Redes Sociales</h2>
 
-<div class="tarjeta contacto">
+<div class="contacto">
 
-<p><strong>Dirección:</strong> Coronel Martínez, Luque</p>
-
+<div>
+<h3>Contacto</h3>
 <p><strong>Teléfono:</strong> (021) 543-243</p>
-
 <p><strong>WhatsApp:</strong> 0986549906</p>
-
 <p><strong>Correo:</strong> tttrosales2011@gmail.com</p>
+</div>
 
-<br>
-
+<div>
 <h3>Redes Sociales</h3>
-
-<p>TikTok: buses.py</p>
-<p>Facebook: Transporte y Turismo Guaraní S.R.L</p>
-<p>Instagram: Transporte y Turismo Guaraní S.R.L</p>
+<p><strong>TikTok:</strong> buses.py</p>
+<p><strong>Facebook:</strong> Transporte y Turismo Guaraní S.R.L</p>
+<p><strong>Instagram:</strong> Transporte y Turismo Guaraní S.R.L</p>
+</div>
 
 </div>
 
 </section>
 
+<section id="ubicacion">
+
+<h2>Ubicación</h2>
+
+<iframe src="https://www.google.com/maps?q=Coronel+Martinez+Luque+Paraguay&output=embed"></iframe>
+
+</section>
+
 <footer>
 
-<p>© 2026 Transporte y Turismo Guaraní S.R.L</p>
+<h3>Transporte y Turismo Guaraní S.R.L</h3>
 
 <p>Excelencia en servicios</p>
 
+<br>
+
+<p>© 2026 Todos los derechos reservados.</p>
+
 </footer>
+
+<a class="whatsapp"
+href="https://wa.me/595986549906"
+target="_blank">☎</a>
 
 </body>
 </html>
